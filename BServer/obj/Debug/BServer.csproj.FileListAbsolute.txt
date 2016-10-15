@@ -1,0 +1,9 @@
+D:\VS\bRat\BServer\bin\Debug\BServer.exe.config
+D:\VS\bRat\BServer\bin\Debug\BServer.exe
+D:\VS\bRat\BServer\bin\Debug\BServer.pdb
+D:\VS\bRat\BServer\obj\Debug\BServer.csprojResolveAssemblyReference.cache
+D:\VS\bRat\BServer\obj\Debug\BRat.Form1.resources
+D:\VS\bRat\BServer\obj\Debug\BRat.Properties.Resources.resources
+D:\VS\bRat\BServer\obj\Debug\BServer.csproj.GenerateResource.Cache
+D:\VS\bRat\BServer\obj\Debug\BServer.exe
+D:\VS\bRat\BServer\obj\Debug\BServer.pdb

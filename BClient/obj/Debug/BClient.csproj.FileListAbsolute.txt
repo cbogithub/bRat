@@ -1,0 +1,6 @@
+D:\VS\bRat\BClient\bin\Debug\BClient.exe.config
+D:\VS\bRat\BClient\bin\Debug\BClient.exe
+D:\VS\bRat\BClient\bin\Debug\BClient.pdb
+D:\VS\bRat\BClient\obj\Debug\BClient.csprojResolveAssemblyReference.cache
+D:\VS\bRat\BClient\obj\Debug\BClient.exe
+D:\VS\bRat\BClient\obj\Debug\BClient.pdb
