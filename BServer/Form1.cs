@@ -5,6 +5,8 @@ using System.Windows.Forms;
 namespace BRat {
     public partial class Form1 : Form {
 
+        Server server;
+
         public Form1() {
             InitializeComponent();
         }
@@ -19,7 +21,7 @@ namespace BRat {
 
             btn_startServer.Enabled = false;
 
-            Server server = new Server(port);
+            server = new Server(port);
             server.StartServer();
 
             server.OnClientConnected += ClientConnected;
@@ -56,6 +58,10 @@ namespace BRat {
             } else {
                 del.DynamicInvoke(obj);
             }
+        }
+
+        private void button1_Click(object sender, EventArgs e) {
+            server.Send("Hi from serv xd");
         }
     }
 }

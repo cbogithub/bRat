@@ -12,6 +12,9 @@ namespace BRat {
     delegate void DataReceivedHandler(object sender, DataReceivedEventArgs args);
     delegate void ClientDisconnectedHandler(object sender, ClientEventArgs args);
 
+    /// <summary>
+    /// Socket info class for handling socket informations like is online etc.
+    /// </summary>
     struct SocketInfo {
         public Socket socket;
         public bool isOnline;
@@ -127,6 +130,19 @@ namespace BRat {
             } catch(Exception) { }
         }
 
+        public void Send(string text) {
+            try {
+                byte[] buffer = Encoding.ASCII.GetBytes(text);
+                selectedSocket.BeginSend(buffer, 0, buffer.Length, SocketFlags.None, new AsyncCallback(SendCallback), null);
+            } catch(Exception) { }
+        }
+
+        private void SendCallback(IAsyncResult ar) {
+            try {
+                socket.EndSend(ar);
+            } catch(Exception) { }
+        }
+
         /// <summary>
         /// Runs when a client connected.
         /// Adds connected client to connectedSockets.
@@ -171,7 +187,7 @@ namespace BRat {
         /// <param name="sock"></param>
         /// <returns></returns>
         public bool IsConnected(Socket sock) {
-            return !((sock.Poll(1000, SelectMode.SelectRead) && (sock.Available == 0)) || !sock.Connected);
+            return !((sock.Poll(1, SelectMode.SelectRead) && (sock.Available == 0)) || !sock.Connected);
         }
     }
 
